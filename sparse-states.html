@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Zayed Humayun’s MSc research on learning sparse quantum states with single-qubit Pauli measurements, illustrated with a two-qubit example.">
+  <title>Learning sparse pure states · Zayed Humayun</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page note">
+    <p class="back"><a href="index.html#research">← Zayed Humayun</a></p>
+    <h1>Learning sparse pure states with single-qubit Pauli measurements</h1>
+    <p class="byline">Zayed Humayun · MSc research in progress · <a href="papers/sparse-pauli-tomography.pdf">Read the manuscript (PDF)</a></p>
+    <p>An <i>n</i>-qubit state has <span class="math">2<sup><i>n</i></sup></span> possible computational-basis strings. In a sparse pure state, only a small number of these strings have nonzero amplitudes. Given fresh copies of the state and an upper bound on that number, how efficiently can we learn the strings and their complex amplitudes?</p>
+    <section aria-labelledby="measurements">
+      <h2 id="measurements">What can the learner measure?</h2>
+      <p>On each copy, the learner chooses an <i>X</i>, <i>Y</i>, or <i>Z</i> measurement for each qubit before seeing any outcomes. Data from earlier copies can guide these choices. The measurements require no entangling gates.</p>
+    </section>
+    <section aria-labelledby="example">
+      <h2 id="example">A two-qubit example</h2>
+      <p>Consider the two states <span class="math" aria-label="ket zero zero plus ket one one, divided by the square root of two">(|00⟩ + |11⟩)/√2</span> and <span class="math" aria-label="ket zero zero minus ket one one, divided by the square root of two">(|00⟩ − |11⟩)/√2</span>. Measuring both qubits in <i>Z</i> gives 00 or 11, each with probability one half, for either state. Those frequencies tell us which strings occur and the magnitude of each amplitude. The relative sign is still unknown.</p>
+      <p>Now measure both qubits in <i>X</i> on a fresh copy. For the first state the two outcomes always agree. For the second they always disagree. Comparing the two outcomes reveals the sign.</p>
+    </section>
+    <section aria-labelledby="problem">
+      <h2 id="problem">Beyond a single sign</h2>
+      <p>With many occupied strings, a measurement can mix contributions from several pairs. My research studies how to choose measurements and combine their outcomes to recover the relative phases across the whole state. I track the number of copies measured and the time needed to process the results on a classical computer.</p>
+    </section>
+  </main>
+</body>
+</html>
